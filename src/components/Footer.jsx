@@ -1,15 +1,48 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
-    <footer className="bg-black border-t border-zinc-800 py-10">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <footer className="border-t border-white/10 bg-black py-14">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-3">
 
-        <h2 className="text-2xl font-bold text-yellow-400">
-          ÉLAN Studio
-        </h2>
+        <div>
+          <h2
+            className="text-3xl font-bold"
+            style={{ color: "var(--accent)" }}
+          >
+            ÉLAN Studio
+          </h2>
 
-        <p className="text-zinc-500 mt-4 md:mt-0">
-          © 2026 All Rights Reserved.
-        </p>
+          <p className="mt-4 leading-7 text-zinc-400">
+            Experience luxury beauty services with expert stylists, premium
+            products, and personalized care in a relaxing salon environment.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="mb-4 text-xl font-semibold">Quick Links</h3>
+
+          <div className="space-y-3 text-zinc-400">
+            <p><Link to="/">Home</Link></p>
+            <p><Link to="/about">About Us</Link></p>
+            <p><a href="/#services">Services</a></p>
+            <p><a href="/#gallery">Gallery</a></p>
+            <p><a href="/#contact">Contact</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-4 text-xl font-semibold">Legal</h3>
+
+          <div className="space-y-3 text-zinc-400">
+            <p><Link to="/privacy-policy">Privacy Policy</Link></p>
+            <p><Link to="/terms-and-conditions">Terms & Conditions</Link></p>
+          </div>
+
+          <p className="mt-8 text-sm text-zinc-500">
+            © 2026 ÉLAN Studio. All Rights Reserved.
+          </p>
+        </div>
 
       </div>
     </footer>

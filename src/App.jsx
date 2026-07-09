@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Services from "./components/Services";
-import WhyChoose from "./components/WhyChoose";
-import BeforeAfter from "./components/BeforeAfter";
-import Testimonials from "./components/Testimonials";
-import Pricing from "./components/Pricing";
-import Team from "./components/Team";
-import Gallery from "./components/Gallery";
-import FAQ from "./components/FAQ";
-import CTA from "./components/CTA";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import NotFound from "./pages/NotFound";
+
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [theme, setTheme] = useState(
@@ -32,57 +29,17 @@ function App() {
       style={{ "--accent": theme }}
     >
       <Navbar />
+      <ScrollToTop />
 
-      <section id="home" className="scroll-mt-28">
-        <Hero />
-      </section>
-
-      <section id="experience" className="scroll-mt-28">
-        <Experience />
-      </section>
-
-      <section id="services" className="scroll-mt-28">
-        <Services />
-      </section>
-
-      <section id="why" className="scroll-mt-28">
-        <WhyChoose />
-      </section>
-
-      <section id="before-after" className="scroll-mt-28">
-        <BeforeAfter />
-      </section>
-
-      <section id="testimonials" className="scroll-mt-28">
-        <Testimonials />
-      </section>
-
-      <section id="pricing" className="scroll-mt-28">
-        <Pricing />
-      </section>
-
-      <section id="team" className="scroll-mt-28">
-        <Team />
-      </section>
-
-      <section id="gallery" className="scroll-mt-28">
-        <Gallery />
-      </section>
-
-      <section id="faq" className="scroll-mt-28">
-        <FAQ />
-      </section>
-
-      <section id="cta" className="scroll-mt-28">
-        <CTA />
-      </section>
-
-      <section id="contact" className="scroll-mt-28">
-        <Contact />
-      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
       <Footer />
-
       <ThemeSwitcher setTheme={setTheme} />
       <WhatsAppButton />
     </div>
