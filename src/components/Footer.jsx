@@ -51,7 +51,7 @@ function Footer() {
             </p>
 
             <a
-              href="https://retivio.com"
+href="https://retivio.in"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-block font-semibold"
