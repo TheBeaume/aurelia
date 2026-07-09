@@ -1,4 +1,10 @@
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
+import siteConfig from "../data/siteConfig";
 
 function Contact() {
   return (
@@ -21,46 +27,49 @@ function Contact() {
           <div className="rounded-3xl border border-white/10 bg-zinc-900 p-8">
 
             <div className="mb-8">
-              <h3
-                className="text-xl font-semibold"
-                style={{ color: "var(--accent)" }}
-              >
-                <FaPhoneAlt className="inline mr-3" />
+              <h3 className="flex items-center gap-3 text-xl font-semibold">
+                <FaPhoneAlt style={{ color: "var(--accent)" }} />
                 Phone
               </h3>
-              <p className="mt-2 text-zinc-400">
-                +91 98765 43210
-              </p>
+
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="mt-2 block text-zinc-400 hover:text-white"
+              >
+                {siteConfig.phone}
+              </a>
             </div>
 
             <div className="mb-8">
-              <h3
-                className="text-xl font-semibold"
-                style={{ color: "var(--accent)" }}
-              >
-                <FaEnvelope className="inline mr-3" />
+              <h3 className="flex items-center gap-3 text-xl font-semibold">
+                <FaEnvelope style={{ color: "var(--accent)" }} />
                 Email
               </h3>
-              <p className="mt-2 text-zinc-400">
-                hello@aurelia.com
-              </p>
+
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="mt-2 block text-zinc-400 hover:text-white"
+              >
+                {siteConfig.email}
+              </a>
             </div>
 
             <div className="mb-8">
-              <h3
-                className="text-xl font-semibold"
-                style={{ color: "var(--accent)" }}
-              >
-                <FaMapMarkerAlt className="inline mr-3" />
+              <h3 className="flex items-center gap-3 text-xl font-semibold">
+                <FaMapMarkerAlt style={{ color: "var(--accent)" }} />
                 Address
               </h3>
+
               <p className="mt-2 text-zinc-400">
-                123 Luxury Street, Downtown
+                {siteConfig.address}
               </p>
             </div>
 
-            <button
-              className="mt-4 flex items-center gap-3 rounded-full px-8 py-4 font-semibold"
+            <a
+              href={`https://wa.me/${siteConfig.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-3 rounded-full px-8 py-4 font-semibold transition hover:scale-105"
               style={{
                 background: "var(--accent)",
                 color: "#000",
@@ -68,14 +77,14 @@ function Contact() {
             >
               <FaWhatsapp />
               Chat on WhatsApp
-            </button>
+            </a>
 
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-zinc-900 p-8">
-            <div className="flex h-full min-h-[350px] items-center justify-center rounded-2xl border border-dashed border-white/20 text-zinc-500">
-              Google Maps Placeholder
-            </div>
+          <div className="rounded-3xl border border-white/10 bg-zinc-900 p-8 flex items-center justify-center">
+            <p className="text-zinc-500 text-center">
+              Google Maps Embed will be added here
+            </p>
           </div>
 
         </div>

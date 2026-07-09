@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { FaArrowRight, FaChevronDown } from "react-icons/fa";
 import Button from "./ui/Button";
+import heroImage from "../assets/images/hero.png";
 
 function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center bg-cover bg-center overflow-hidden"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80')",
-      }}
+style={{
+  backgroundImage: `url(${heroImage})`,
+}}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/75" />
 
@@ -62,12 +62,18 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-5">
-          <Button className="flex items-center gap-3">
+<Button
+  className="flex items-center gap-3"
+  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+>
             Book Appointment
             <FaArrowRight />
           </Button>
 
-          <Button variant="secondary">
+<Button
+  variant="secondary"
+  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+>
             Explore Services
           </Button>
         </div>
