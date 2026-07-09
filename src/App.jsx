@@ -6,9 +6,11 @@ import Experience from "./components/Experience";
 import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
 import Testimonials from "./components/Testimonials";
+import BeforeAfter from "./components/BeforeAfter";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import Pricing from "./components/Pricing";
 
 function App() {
   const [theme, setTheme] = useState("#D4AF37");
@@ -23,7 +25,9 @@ function App() {
       <Experience />
       <Services />
       <WhyChoose />
+      <BeforeAfter />
       <Testimonials />
+<Pricing />
       <Footer />
 
       <ThemeSwitcher setTheme={setTheme} />
