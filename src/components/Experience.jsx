@@ -1,43 +1,62 @@
+import experience from "../assets/images/experience.png";
+
 function Experience() {
   return (
     <section className="bg-black py-24 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid items-center gap-12 lg:grid-cols-2">
 
         <div>
           <img
-            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
-            alt="Salon"
-            className="rounded-3xl w-full"
+            src={experience}
+            alt="Luxury Salon Interior"
+            className="w-full rounded-3xl object-cover"
           />
         </div>
 
         <div>
-          <p className="uppercase tracking-[5px] text-yellow-400">
+          <p
+            className="uppercase tracking-[5px]"
+            style={{ color: "var(--accent)" }}
+          >
             Our Story
           </p>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="mt-4 text-5xl font-bold">
             Crafted For
-            <span className="text-yellow-400"> Confidence</span>
+            <span style={{ color: "var(--accent)" }}> Confidence</span>
           </h2>
 
-          <p className="mt-8 text-zinc-400 leading-8">
-            Every haircut, facial and makeover is designed to make you
-            feel confident, elegant and beautiful.
+          <p className="mt-8 leading-8 text-zinc-400">
+            Every haircut, facial, makeover, and wellness treatment is
+            thoughtfully designed to help you feel confident, elegant, and
+            beautiful. Our experienced professionals combine creativity with
+            premium products to deliver exceptional results every time you visit.
           </p>
 
-          <div className="grid grid-cols-2 gap-6 mt-10">
+          <div className="mt-10 grid grid-cols-2 gap-6">
 
-            <div className="border border-zinc-800 rounded-2xl p-6">
-              <h3 className="text-3xl text-yellow-400 font-bold">10+</h3>
-              <p className="text-zinc-500 mt-2">
+            <div className="rounded-2xl border border-white/10 p-6">
+              <h3
+                className="text-3xl font-bold"
+                style={{ color: "var(--accent)" }}
+              >
+                10+
+              </h3>
+
+              <p className="mt-2 text-zinc-500">
                 Years Experience
               </p>
             </div>
 
-            <div className="border border-zinc-800 rounded-2xl p-6">
-              <h3 className="text-3xl text-yellow-400 font-bold">100%</h3>
-              <p className="text-zinc-500 mt-2">
+            <div className="rounded-2xl border border-white/10 p-6">
+              <h3
+                className="text-3xl font-bold"
+                style={{ color: "var(--accent)" }}
+              >
+                100%
+              </h3>
+
+              <p className="mt-2 text-zinc-500">
                 Premium Products
               </p>
             </div>
