@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import Pricing from "./components/Pricing";
+import Team from "./components/Team";
 
 function App() {
   const [theme, setTheme] = useState("#D4AF37");
@@ -28,6 +29,7 @@ function App() {
       <BeforeAfter />
       <Testimonials />
 <Pricing />
+<Team />
       <Footer />
 
       <ThemeSwitcher setTheme={setTheme} />
