@@ -1,26 +1,21 @@
 const siteConfig = {
-  brand: "ÉLAN Studio",
+  salonName: "AURELIA",
 
   tagline: "Luxury Hair • Skin • Spa",
 
+  heroTitle: "Experience Luxury Beauty Like Never Before",
+
   phone: "+91 98765 43210",
+
+  email: "hello@aurelia.com",
 
   whatsapp: "919876543210",
 
-  email: "hello@elanstudio.com",
+  address: "123 Luxury Street, Downtown",
 
-  address: "Sector 17, Chandigarh",
+  instagram: "@aurelia",
 
-  heroTitle: "Elevate Your Beauty Experience",
-
-  heroDescription:
-    "Discover luxury hair styling, skincare and spa treatments designed for elegance.",
-
-  stats: [
-    { value: "15+", label: "Expert Stylists" },
-    { value: "12K+", label: "Happy Clients" },
-    { value: "4.9★", label: "Google Rating" },
-  ],
+  openingHours: "Mon - Sun | 10:00 AM - 8:00 PM",
 };
 
 export default siteConfig;
